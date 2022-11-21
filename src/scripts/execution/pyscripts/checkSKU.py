@@ -89,13 +89,13 @@ indx2=[]
 #Extraer productos de "in stock" y "pre order" que no permitan añadir al carrito. Es decir, no tengan los CTAs:
 # "comprar", "añadir al carrito" o "precomprar" o extraer los que no tienen stock
 for i in range(len(y.SKU)):
-    if y.Availability[i] == 'pre order' and (y.CTA[i] == 'recibir alertas de stock' or y.CTA[i] == 'producto no disponible.' or y.CTA[i] == 'dónde comprar' or y.CTA[i] == 0 or y.CTA[i] =='agotado'):
+    if y.Availability[i] == 'pre order' and (y.CTA[i] == 'receba alertas de stock' or y.CTA[i] == 'onde comprar' or y.CTA[i] == 0 or y.CTA[i] == 'não está à venda'):
 
             indx2.append(i)
-    elif y.Availability[i]== 'in stock' and (y.CTA[i] == 'recibir alertas de stock' or y.CTA[i] == 'producto no disponible.' or y.CTA[i] == 'dónde comprar' or y.CTA[i] == 0 or y.CTA[i] =='agotado'):
+    elif y.Availability[i]== 'in stock' and (y.CTA[i] == 'receba alertas de stock' or y.CTA[i] == 'onde comprar' or y.CTA[i] == 0 or y.CTA[i] == 'não está à venda'):
 
             indx2.append(i)
-    elif y.Availability[i]=='out of stock' and (y.CTA[i] == 'comprar' or y.CTA[i] == 'añadir al carrito') :
+    elif y.Availability[i]=='out of stock' and (y.CTA[i] == 'comprar' or y.CTA[i] == 'adicionar ao carrinho') :
 
         indx2.append(i)
 
